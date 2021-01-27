@@ -1,0 +1,148 @@
+
+:root {
+    --mygreen: rgb(125, 253, 125);
+    --mytextpink:rgb(243, 102, 208)
+    }
+
+
+body {
+    background-color: rgb(255, 253, 134);
+    color:teal;
+    font-family: monospace;
+    font-size: 32px;
+    padding: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container {
+    position: relative;
+    width: 600px;
+    height: auto;
+    border: 90px solid var(--mygreen);
+    border-width: 20px;
+    border-radius: 90px;
+    padding-bottom: 1%;
+    padding-top: 0%;
+    padding-left: 4%;
+    padding-right: 4%;
+    transition: all 0.1s;
+}
+h1 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+#container:hover {
+    border-color: rgb(253, 0, 190);
+    border-width: 20px;
+    color:var(--mytextpink);
+}
+#container ul {
+    margin-top: 2px;
+    padding: 2px;
+}
+#container ul li {
+    list-style: none;
+    color:teal;
+    width: 100%;
+    opacity: 80%;
+    transition: opacity 0.5s ease-in-out;
+    height: auto;
+    margin: 2px auto;
+    text-align: left;
+}
+#container ul li label {
+    margin: 0px auto;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 40px;
+    font-size: 18px;;
+}
+#container ul li label {
+    margin: 0px auto;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 40px;
+    font-size: 28px;;
+}
+#container ul li #check {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    outline: 0;
+}
+/*#container ul li #check:checked:after{
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    bottom: 7px;
+    color: rgb(0, 0, 0);
+}*/
+
+#container ul li input[type="checkbox"]:checked +label {
+   text-decoration: line-through;
+   color: rgb(208, 219, 209);
+}
+
+div.controls {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+#input {
+    width: 337.5px;
+    height: 45px;
+    margin:0 0.2em 0.2em 0;
+    text-align: center;
+    border: 4px solid var(--mygreen);
+    border-radius: 14px;
+    font-family: Helvetica;
+    font-size: 22px;
+    color: rgb(36, 87, 240);
+    font-weight: bold;
+}
+#input:focus {
+    outline: 0;
+      }
+/*Button styling*/
+button.stylish {
+    background-color:var(--mygreen);
+    width: 350px;
+    height: 60px;
+    padding:0.2em 2.0em;
+    margin:0 0.2em 0.2em 0;
+    border:0.16em solid var(--mygreen);
+    border-width: 5px;
+    border-radius:14px;
+    font-family:'Roboto',sans-serif;
+    font-size: 24px;
+    font-weight:600;
+    color:#ffffff;
+    transition: all 0.3s;
+}
+button.stylish:hover{
+    border-color: rgb(253, 0, 190);
+    border-width: 5px;
+    color: var(--mytextpink);
+}
+/*Button: remove line at click*/
+button:focus {
+    outline: 0;
+}
+#container.mycheck {
+    opacity: 1;
+    border-radius: 10px;
+}
+.visual {
+    animation:blinkingText 0.24s 2;
+}
+@keyframes blinkingText{
+	0%{		color: var(--mytextpink);	}
+	49%{	color: transparent;	}
+	50%{	color: transparent;	}
+	99%{	color: transparent;	}
+	100%{	color:var(--mytextpink);	}
+}
